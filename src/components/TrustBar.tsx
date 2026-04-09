@@ -12,14 +12,16 @@ const TrustBar = () => {
   const ref = useFadeIn();
 
   return (
-    <section ref={ref} className="fade-in-section relative z-10 -mt-16">
+    <section ref={ref} className="fade-in-section relative z-10 -mt-20">
       <div className="container mx-auto px-6">
-        <div className="glass-card grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 p-8 md:p-10">
+        <div className="glass-card grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 p-10 md:p-14">
           {metrics.map((m) => (
-            <div key={m.label} className="flex flex-col items-center text-center gap-2">
-              <m.icon size={28} className="text-primary mb-1" />
-              <span className="font-heading text-2xl md:text-3xl font-bold text-foreground">{m.value}</span>
-              <span className="text-sm text-muted-foreground">{m.label}</span>
+            <div key={m.label} className="flex flex-col items-center text-center gap-3">
+              <div className="p-3 rounded-xl bg-primary/10">
+                <m.icon size={24} className="text-primary" />
+              </div>
+              <span className="font-heading text-3xl md:text-4xl font-bold text-foreground">{m.value}</span>
+              <span className="text-sm text-muted-foreground tracking-wide">{m.label}</span>
             </div>
           ))}
         </div>

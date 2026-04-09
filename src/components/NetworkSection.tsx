@@ -6,28 +6,30 @@ const NetworkSection = () => {
   const ref = useFadeIn();
 
   return (
-    <section id="network" ref={ref} className="fade-in-section py-24 md:py-32">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+    <section id="network" ref={ref} className="fade-in-section py-32 md:py-44 relative">
+      <div className="section-glow top-0 right-0" />
+
+      <div className="container mx-auto px-6 relative">
+        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
           {/* Left text */}
           <div>
-            <span className="text-primary text-sm font-medium uppercase tracking-widest">Our Network</span>
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mt-3 mb-6 text-foreground">
-              Pan-European <span className="text-gradient">Coverage</span>
+            <span className="text-primary text-sm font-medium uppercase tracking-[0.2em]">Our Network</span>
+            <h2 className="font-heading text-4xl md:text-6xl font-bold mt-4 mb-8 text-foreground leading-tight">
+              Pan-European<br /><span className="text-gradient">Coverage</span>
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Operating across key European markets with optimized logistics routes and fast delivery times. Our network spans from Scandinavia to the Mediterranean.
+            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+              Optimized logistics routes and fast delivery across key European markets, from Scandinavia to the Mediterranean.
             </p>
 
-            <div className="space-y-5">
+            <div className="space-y-6">
               {[
-                { icon: MapPin, text: "Strategic warehouse locations in Poland & Germany" },
+                { icon: MapPin, text: "Strategic warehouses in Poland & Germany" },
                 { icon: TrendingUp, text: "Optimized cross-border supply chains" },
                 { icon: Globe, text: "Coverage across 15+ EU member states" },
               ].map((item) => (
-                <div key={item.text} className="flex items-start gap-3">
-                  <div className="p-2 rounded-md bg-primary/10 mt-0.5">
-                    <item.icon size={16} className="text-primary" />
+                <div key={item.text} className="flex items-center gap-4">
+                  <div className="p-2.5 rounded-xl bg-primary/10">
+                    <item.icon size={18} className="text-primary" />
                   </div>
                   <span className="text-secondary-foreground">{item.text}</span>
                 </div>
@@ -37,11 +39,11 @@ const NetworkSection = () => {
 
           {/* Right image */}
           <div className="relative">
-            <div className="absolute -inset-4 glow-blob opacity-40 rounded-xl" />
+            <div className="absolute -inset-8 glow-blob opacity-50 rounded-3xl" />
             <img
               src={europeNetwork}
               alt="SALITA TRADE European logistics network"
-              className="relative rounded-xl border border-border/30 w-full"
+              className="relative rounded-2xl border border-white/[0.06] w-full shadow-2xl shadow-primary/10"
               loading="lazy"
               width={800}
               height={800}
