@@ -6,19 +6,22 @@ import NetworkSection from "@/components/NetworkSection";
 import CaseStudies from "@/components/CaseStudies";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { ContactModalProvider } from "@/hooks/useContactModal";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <HeroSection />
-      <TrustBar />
-      <ServicesSection />
-      <NetworkSection />
-      <CaseStudies />
-      <CTASection />
-      <Footer />
-    </div>
+    <ContactModalProvider>
+      <div className="min-h-screen bg-background">
+        <Navbar />
+        <HeroSection />
+        <TrustBar />
+        <ServicesSection />
+        <NetworkSection />
+        <CaseStudies />
+        <CTASection />
+        <Footer />
+      </div>
+    </ContactModalProvider>
   );
 };
 
