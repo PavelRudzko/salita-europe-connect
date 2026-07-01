@@ -1,4 +1,4 @@
-import { MapPin, Mail, Linkedin, Facebook, Instagram } from "lucide-react";
+import { MapPin, Mail, Phone, Linkedin, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -30,6 +30,10 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={14} className="text-primary mt-1 shrink-0" />
                 <span>SALITA TRADE Sp. z o.o.<br />Ul. Goździków 29/31 30A<br />04-231 Warszawa, Poland</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={14} className="text-primary shrink-0" />
+                <a href="tel:+48111111111" className="hover:text-foreground transition-colors">+48 111 111 111</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={14} className="text-primary shrink-0" />
