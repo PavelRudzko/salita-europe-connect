@@ -32,6 +32,10 @@ const Footer = () => {
                 <span>SALITA TRADE Sp. z o.o.<br />Ul. Goździków 29/31 30A<br />04-231 Warszawa, Poland</span>
               </li>
               <li className="flex items-center gap-3">
+                <Phone size={14} className="text-primary shrink-0" />
+                <a href="tel:+48111111111" className="hover:text-foreground transition-colors">+48 111 111 111</a>
+              </li>
+              <li className="flex items-center gap-3">
                 <Mail size={14} className="text-primary shrink-0" />
                 <span>NIP: 5252931226</span>
               </li>
