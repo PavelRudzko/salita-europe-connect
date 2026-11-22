@@ -1,4 +1,4 @@
-import { MapPin, TrendingUp, Globe } from "lucide-react";
+import { Truck } from "lucide-react";
 import { useFadeIn } from "@/hooks/useFadeIn";
 import europeNetwork from "@/assets/europe-network.jpg";
 
@@ -18,22 +18,16 @@ const NetworkSection = () => {
               Pan-European<br /><span className="text-gradient">Coverage</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Optimized logistics routes and fast delivery across key European markets, from Scandinavia to the Mediterranean.
+              Road freight across European markets, from Scandinavia to the Mediterranean.
             </p>
 
             <div className="space-y-6">
-              {[
-                { icon: MapPin, text: "Strategic warehouses in Poland & Germany" },
-                { icon: TrendingUp, text: "Optimized cross-border supply chains" },
-                { icon: Globe, text: "Coverage across 15+ EU member states" },
-              ].map((item) => (
-                <div key={item.text} className="flex items-center gap-4">
-                  <div className="p-2.5 rounded-xl bg-primary/10">
-                    <item.icon size={18} className="text-primary" />
-                  </div>
-                  <span className="text-secondary-foreground">{item.text}</span>
+              <div className="flex items-center gap-4">
+                <div className="p-2.5 rounded-xl bg-primary/10">
+                  <Truck size={18} className="text-primary" />
                 </div>
-              ))}
+                <span className="text-secondary-foreground">Road freight across European markets</span>
+              </div>
             </div>
           </div>
 

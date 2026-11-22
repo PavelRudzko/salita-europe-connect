@@ -1,4 +1,4 @@
-import { Cpu, Truck, Warehouse } from "lucide-react";
+import { Cpu, Truck } from "lucide-react";
 import { useFadeIn } from "@/hooks/useFadeIn";
 
 const services = [
@@ -11,11 +11,6 @@ const services = [
     icon: Truck,
     title: "Logistics",
     desc: "End-to-end freight management with optimized routes. FTL, LTL, and express delivery.",
-  },
-  {
-    icon: Warehouse,
-    title: "Warehousing",
-    desc: "Modern EU warehouse facilities with inventory management, pick & pack, and fulfillment.",
   },
 ];
 
@@ -32,7 +27,7 @@ const ServicesSection = () => {
           <h2 className="font-heading text-4xl md:text-6xl font-bold mt-4 text-foreground">Core Services</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {services.map((s) => (
             <div key={s.title} className="glass-card-hover p-10 md:p-12 flex flex-col items-start gap-6">
               <div className="p-4 rounded-2xl gradient-primary shadow-lg shadow-primary/20">

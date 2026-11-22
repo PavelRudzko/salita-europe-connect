@@ -1,11 +1,9 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { useContactModal } from "@/hooks/useContactModal";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const openContact = useContactModal();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/[0.04] bg-background/70 backdrop-blur-xl">
@@ -17,9 +15,10 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Services</a>
           <a href="#network" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Network</a>
-          <a href="#cases" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Case Studies</a>
           <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</a>
-          <Button size="sm" onClick={openContact}>Request Quote</Button>
+          <Button size="sm" asChild>
+            <a href="mailto:logistic@salitatrade.pl">Request Quote</a>
+          </Button>
         </div>
 
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
@@ -31,9 +30,10 @@ const Navbar = () => {
         <div className="md:hidden border-t border-white/[0.04] bg-background/95 backdrop-blur-xl px-6 py-4 flex flex-col gap-4">
           <a href="#services" className="text-sm text-muted-foreground" onClick={() => setOpen(false)}>Services</a>
           <a href="#network" className="text-sm text-muted-foreground" onClick={() => setOpen(false)}>Network</a>
-          <a href="#cases" className="text-sm text-muted-foreground" onClick={() => setOpen(false)}>Case Studies</a>
           <a href="#contact" className="text-sm text-muted-foreground" onClick={() => setOpen(false)}>Contact</a>
-          <Button size="sm" className="w-fit" onClick={() => { setOpen(false); openContact(); }}>Request Quote</Button>
+          <Button size="sm" className="w-fit" asChild>
+            <a href="mailto:logistic@salitatrade.pl">Request Quote</a>
+          </Button>
         </div>
       )}
     </nav>

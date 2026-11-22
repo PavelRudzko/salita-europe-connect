@@ -1,11 +1,8 @@
 import { ArrowRight, FileText } from "lucide-react";
 import { Button } from "./ui/button";
-import { useContactModal } from "@/hooks/useContactModal";
 import heroMap from "@/assets/europe-map-glow.jpg";
 
 const HeroSection = () => {
-  const openContact = useContactModal();
-
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
@@ -27,17 +24,21 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed">
-          Wholesale electronics, warehousing, and fast transport solutions across EU markets.
+          Wholesale electronics and fast transport solutions across EU markets.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button onClick={openContact} size="lg" className="gap-2 text-base px-10 py-7 gradient-primary text-primary-foreground font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-shadow">
-            <FileText size={18} />
-            Request Price List
+          <Button asChild size="lg" className="gap-2 text-base px-10 py-7 gradient-primary text-primary-foreground font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-shadow">
+            <a href="mailto:logistic@salitatrade.pl">
+              <FileText size={18} />
+              Request Price List
+            </a>
           </Button>
-          <Button onClick={openContact} size="lg" variant="outline" className="gap-2 text-base px-10 py-7 border-white/10 bg-white/[0.03] text-foreground hover:bg-white/[0.06] hover:border-white/20 backdrop-blur-sm transition-all">
-            Get Logistics Quote
-            <ArrowRight size={18} />
+          <Button asChild size="lg" variant="outline" className="gap-2 text-base px-10 py-7 border-white/10 bg-white/[0.03] text-foreground hover:bg-white/[0.06] hover:border-white/20 backdrop-blur-sm transition-all">
+            <a href="mailto:logistic@salitatrade.pl">
+              Get Logistics Quote
+              <ArrowRight size={18} />
+            </a>
           </Button>
         </div>
       </div>

@@ -1,11 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { useFadeIn } from "@/hooks/useFadeIn";
-import { useContactModal } from "@/hooks/useContactModal";
 
 const CTASection = () => {
   const ref = useFadeIn();
-  const openContact = useContactModal();
 
   return (
     <section id="contact" ref={ref} className="fade-in-section py-32 md:py-44 relative overflow-hidden">
@@ -19,11 +17,13 @@ const CTASection = () => {
           <span className="text-gradient">EU Partner</span>
         </h2>
         <p className="text-muted-foreground text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-          Competitive pricing on wholesale electronics, logistics, and warehousing. Let's scale together.
+          Competitive pricing on wholesale electronics and logistics. Let's scale together.
         </p>
-        <Button onClick={openContact} size="lg" className="gap-2 text-base px-12 py-7 gradient-primary text-primary-foreground font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 transition-all">
-          Request a Quote
-          <ArrowRight size={18} />
+        <Button asChild size="lg" className="gap-2 text-base px-12 py-7 gradient-primary text-primary-foreground font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 transition-all">
+          <a href="mailto:logistic@salitatrade.pl">
+            Request a Quote
+            <ArrowRight size={18} />
+          </a>
         </Button>
       </div>
     </section>
