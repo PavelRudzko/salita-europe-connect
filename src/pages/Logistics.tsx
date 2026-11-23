@@ -2,6 +2,7 @@ import BusinessPage from "@/components/BusinessPage";
 
 export default function Logistics() {
   return <BusinessPage
+    showNetwork
     title="European Logistics"
     description="SALITA TRADE Sp. z o.o. provides road freight and logistics services across Europe."
     eyebrow="European road freight"
