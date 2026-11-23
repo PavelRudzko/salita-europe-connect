@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-white/[0.04] py-20 relative">
+    <footer id="contact" className="border-t border-white/[0.04] py-20 relative scroll-mt-24">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-16">
           <div>
@@ -17,9 +18,9 @@ const Footer = () => {
           <div>
             <h4 className="font-heading text-sm font-semibold text-foreground uppercase tracking-[0.15em] mb-5">Services</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><a href="#services" className="hover:text-foreground transition-colors">Electronics Trading</a></li>
-              <li><a href="#services" className="hover:text-foreground transition-colors">Logistics</a></li>
-              <li><a href="#network" className="hover:text-foreground transition-colors">EU Network</a></li>
+              <li><Link to="/electronics" className="hover:text-foreground transition-colors">Wholesale Electronics</Link></li>
+              <li><Link to="/logistics" className="hover:text-foreground transition-colors">European Logistics</Link></li>
+              <li><Link to="/#network" className="hover:text-foreground transition-colors">EU Network</Link></li>
             </ul>
           </div>
 
