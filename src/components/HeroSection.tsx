@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, FileText } from "lucide-react";
 import { Button } from "./ui/button";
 import heroMap from "@/assets/europe-map-glow.jpg";
@@ -15,7 +16,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 container mx-auto px-6 text-center max-w-5xl pt-24">
         <div className="inline-block mb-8 px-5 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium backdrop-blur-sm">
-          ✦ Trusted EU Electronics Partner
+          ✦ Wholesale Electronics & European Logistics
         </div>
 
         <h1 className="font-heading text-5xl sm:text-6xl md:text-8xl font-bold leading-[1.05] mb-8 glow-text text-foreground tracking-tight">
@@ -24,21 +25,21 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed">
-          Wholesale electronics and fast transport solutions across EU markets.
+          B2B wholesale electronics and road freight services across Europe.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" className="gap-2 text-base px-10 py-7 gradient-primary text-primary-foreground font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-shadow">
-            <a href="mailto:logistic@salitatrade.pl">
+          <Button asChild size="lg" className="gap-2 text-base px-5 sm:px-10 py-7 gradient-primary text-primary-foreground font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-shadow">
+            <Link to="/electronics">
               <FileText size={18} />
-              Request Price List
-            </a>
+              Wholesale Electronics
+            </Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="gap-2 text-base px-10 py-7 border-white/10 bg-white/[0.03] text-foreground hover:bg-white/[0.06] hover:border-white/20 backdrop-blur-sm transition-all">
-            <a href="mailto:logistic@salitatrade.pl">
-              Get Logistics Quote
+          <Button asChild size="lg" variant="outline" className="gap-2 text-base px-5 sm:px-10 py-7 border-white/10 bg-white/[0.03] text-foreground hover:bg-white/[0.06] hover:border-white/20 backdrop-blur-sm transition-all">
+            <Link to="/logistics">
+              European Logistics
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
