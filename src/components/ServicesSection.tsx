@@ -1,16 +1,21 @@
+import { Link } from "react-router-dom";
 import { Cpu, Truck } from "lucide-react";
 import { useFadeIn } from "@/hooks/useFadeIn";
 
 const services = [
   {
     icon: Cpu,
-    title: "Electronics Trading",
-    desc: "Wholesale sourcing of consumer electronics and components from trusted global manufacturers.",
+    title: "Wholesale Electronics",
+    to: "/electronics",
+    label: "Explore electronics",
+    desc: "Electronics wholesale for business customers.",
   },
   {
     icon: Truck,
-    title: "Logistics",
-    desc: "End-to-end freight management with optimized routes. FTL, LTL, and express delivery.",
+    title: "European Logistics",
+    to: "/logistics",
+    label: "Explore logistics",
+    desc: "Road freight and logistics services across Europe.",
   },
 ];
 
@@ -29,13 +34,14 @@ const ServicesSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {services.map((s) => (
-            <div key={s.title} className="glass-card-hover p-10 md:p-12 flex flex-col items-start gap-6">
+            <Link to={s.to} key={s.title} className="glass-card-hover p-10 md:p-12 flex flex-col items-start gap-6">
               <div className="p-4 rounded-2xl gradient-primary shadow-lg shadow-primary/20">
                 <s.icon size={28} className="text-primary-foreground" />
               </div>
               <h3 className="font-heading text-2xl font-semibold text-foreground">{s.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
-            </div>
+              <span className="text-primary font-medium mt-auto">{s.label} →</span>
+            </Link>
           ))}
         </div>
       </div>
