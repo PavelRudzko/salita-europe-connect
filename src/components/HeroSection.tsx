@@ -7,8 +7,8 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroMap} alt="European logistics network" className="w-full h-full object-cover opacity-30" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+        <img src={heroMap} alt="European logistics network" className="w-full h-full object-cover opacity-70" width={1920} height={1080} />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background" />
       </div>
 
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] glow-blob animate-pulse-glow" />
@@ -24,7 +24,7 @@ const HeroSection = () => {
           <span className="text-gradient">Logistics Across Europe</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed">
+        <p className="text-lg md:text-xl text-slate-300 [text-shadow:0_2px_8px_rgb(0_0_0_/_0.9)] max-w-2xl mx-auto mb-14 leading-relaxed">
           B2B wholesale electronics and road freight services across Europe.
         </p>
 
