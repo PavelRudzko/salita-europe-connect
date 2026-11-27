@@ -18,7 +18,7 @@ const NetworkSection = () => {
               Pan-European<br /><span className="text-gradient">Coverage</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Road freight across European markets, from Scandinavia to the Mediterranean.
+              Road freight to and from Italy, Czech Republic, Slovenia, Lithuania, Latvia, Estonia and Turkey.
             </p>
 
             <div className="space-y-6">
