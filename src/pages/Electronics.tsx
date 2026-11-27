@@ -9,5 +9,6 @@ export default function Electronics() {
     note="Availability, price and terms are discussed for each enquiry. Include your product requirements and delivery details in your email."
     quoteLabel="Request an Electronics Quote"
     subject="Electronics wholesale enquiry"
+    relatedLink={{ to: "/electronics/brands", label: "Brands we trade" }}
   />;
 }
