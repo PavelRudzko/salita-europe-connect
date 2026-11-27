@@ -126,3 +126,17 @@
     pointer-events: none;
   }
 }
+
+@keyframes route-dash-move {
+  to { stroke-dashoffset: -32; }
+}
+.route-dash {
+  animation: route-dash-move 1.2s linear infinite;
+}
+@keyframes route-pulse-ring {
+  0% { r: 5; opacity: 0.9; }
+  100% { r: 16; opacity: 0; }
+}
+.route-pulse {
+  animation: route-pulse-ring 1.8s ease-out infinite;
+}
