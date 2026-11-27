@@ -10,5 +10,6 @@ export default function Logistics() {
     note="Share the details of your transport enquiry so we can discuss your requirements and terms."
     quoteLabel="Request a Logistics Quote"
     subject="European logistics enquiry"
+    routes={["Italy", "Germany", "Czech Republic", "Slovenia", "Lithuania", "Latvia", "Estonia", "Turkey"]}
   />;
 }
