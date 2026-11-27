@@ -7,7 +7,7 @@ export default function BrandPage() {
   const { slug } = useParams();
   const brand = brands.find((b) => b.slug === slug);
   if (!brand) return <NotFound />;
-  const article = ["hp", "oki"].includes(brand.slug) ? "an" : "a";
+  const article = ["hp", "oki", "epson", "asus"].includes(brand.slug) ? "an" : "a";
   return <BusinessPage
     title={brand.name}
     description={`${brand.category} from ${brand.name}, traded wholesale for business customers.`}
