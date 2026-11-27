@@ -1,4 +1,5 @@
 import { ArrowRight, Phone, Check } from "lucide-react";
+import RouteMap from "@/components/RouteMap";
 import NetworkSection from "@/components/NetworkSection";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -15,9 +16,10 @@ type Props = {
   quoteLabel: string;
   subject: string;
   showNetwork?: boolean;
+  routes?: string[];
 };
 
-export default function BusinessPage({ title, description, eyebrow, items, note, quoteLabel, subject, showNetwork = false }: Props) {
+export default function BusinessPage({ title, description, eyebrow, items, note, quoteLabel, subject, showNetwork = false, routes }: Props) {
   return (
     <div className="min-h-screen bg-background overflow-x-clip">
       <Navbar />
@@ -34,6 +36,16 @@ export default function BusinessPage({ title, description, eyebrow, items, note,
           </div>
         </section>
         {showNetwork && <NetworkSection />}
+        {routes && routes.length > 0 && (
+          <section className="relative py-16 md:py-24">
+            <div className="container mx-auto px-6 max-w-6xl">
+              <p className="text-primary text-sm font-medium uppercase mb-4">Main routes</p>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">Where we carry goods</h2>
+              <p className="text-muted-foreground leading-relaxed mb-10 max-w-2xl">We carry goods to and from these countries.</p>
+              <RouteMap routes={routes} />
+            </div>
+          </section>
+        )}
         <section className="relative py-16 md:py-24">
           <div className="container mx-auto px-6 max-w-5xl">
             <div className="grid md:grid-cols-2 gap-12 md:gap-20">
