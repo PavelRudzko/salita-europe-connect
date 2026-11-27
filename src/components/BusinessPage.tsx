@@ -87,8 +87,8 @@ export default function BusinessPage({ title, description, eyebrow, items, note,
                 <a href={company.phoneHref}><Phone size={18} />{company.phone}</a>
               </Button>
               {relatedLink && (
-                <Button asChild variant="link" className="p-0 text-secondary-foreground">
-                  <Link to={relatedLink.to}>{relatedLink.label}<ArrowRight size={18} /></Link>
+                <Button asChild variant="link" className="p-0 text-2xl md:text-3xl font-semibold text-secondary-foreground">
+                  <Link to={relatedLink.to}>{relatedLink.label}<ArrowRight size={30} /></Link>
                 </Button>
               )}
             </div>
