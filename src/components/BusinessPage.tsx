@@ -1,4 +1,5 @@
 import { ArrowRight, Phone, Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import RouteMap from "@/components/RouteMap";
 import NetworkSection from "@/components/NetworkSection";
 import Navbar from "@/components/Navbar";
@@ -17,9 +18,12 @@ type Props = {
   subject: string;
   showNetwork?: boolean;
   routes?: string[];
+  relatedLink?: { to: string; label: string };
+  assortment?: string;
+  models?: string[];
 };
 
-export default function BusinessPage({ title, description, eyebrow, items, note, quoteLabel, subject, showNetwork = false, routes }: Props) {
+export default function BusinessPage({ title, description, eyebrow, items, note, quoteLabel, subject, showNetwork = false, routes, relatedLink, assortment, models }: Props) {
   return (
     <div className="min-h-screen bg-background overflow-x-clip">
       <Navbar />
@@ -46,6 +50,20 @@ export default function BusinessPage({ title, description, eyebrow, items, note,
             </div>
           </section>
         )}
+        {(assortment || (models && models.length > 0)) && (
+          <section className="relative py-16 md:py-24">
+            <div className="container mx-auto px-6 max-w-5xl">
+              <p className="text-primary text-sm font-medium uppercase mb-4">Assortment</p>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">What we supply</h2>
+              {assortment && <p className="text-muted-foreground leading-relaxed mb-8 max-w-2xl">{assortment}</p>}
+              {models && models.length > 0 && (
+                <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {models.map((model) => <li key={model} className="flex gap-3 rounded-lg border border-border bg-card p-4 text-secondary-foreground"><Check size={18} className="text-primary shrink-0 mt-1" /><span>{model}</span></li>)}
+                </ul>
+              )}
+            </div>
+          </section>
+        )}
         <section className="relative py-16 md:py-24">
           <div className="container mx-auto px-6 max-w-5xl">
             <div className="grid md:grid-cols-2 gap-12 md:gap-20">
@@ -68,6 +86,11 @@ export default function BusinessPage({ title, description, eyebrow, items, note,
               <Button asChild variant="link" className="p-0 text-secondary-foreground">
                 <a href={company.phoneHref}><Phone size={18} />{company.phone}</a>
               </Button>
+              {relatedLink && (
+                <Button asChild variant="link" className="p-0 text-secondary-foreground">
+                  <Link to={relatedLink.to}>{relatedLink.label}<ArrowRight size={18} /></Link>
+                </Button>
+              )}
             </div>
           </div>
         </section>
