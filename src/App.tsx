@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Electronics from "./pages/Electronics";
 import Logistics from "./pages/Logistics";
+import Brands from "./pages/Brands";
+import BrandPage from "./pages/BrandPage";
 import RouteEffects from "./components/RouteEffects";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -21,6 +23,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/electronics" element={<Electronics />} />
+          <Route path="/electronics/brands" element={<Brands />} />
+          <Route path="/electronics/brands/:slug" element={<BrandPage />} />
           <Route path="/logistics" element={<Logistics />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
